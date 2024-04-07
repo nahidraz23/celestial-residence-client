@@ -1,6 +1,21 @@
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
+
+    const navLinks = <div className="flex gap-4 flex-col lg:flex-row text-xl uppercase p-3">
+        <NavLink to={'/'} style={({ isActive }) => {
+            return isActive ? { borderBottom: "2px solid #FEDA60", color: '#FEDA60', fontWeight: "600" } : {};
+        }}><li>Home</li></NavLink>
+        <NavLink to={'/update-profile'} style={({ isActive }) => {
+            return isActive ? { borderBottom: "2px solid #FEDA60", color: '#FEDA60', fontWeight: "600" } : {};
+        }}><li className="">Update Profile</li></NavLink>
+        <NavLink to={'/user-profile'} style={({ isActive }) => {
+            return isActive ? { borderBottom: "2px solid #FEDA60", color: '#FEDA60', fontWeight: "600" } : {};
+        }}><li className="">User Profile</li></NavLink>
+    </div>
+
     return (
-        <div>
+        <div className="container mx-auto">
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -8,20 +23,23 @@ const Navbar = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 3</a></li>
+                            {
+                                navLinks
+                            }
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">CelestialResidence</a>
+                    <a className="text-2xl font-bold font-inter ">Celestial Residence</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li><a>Item 3</a></li>
+                        {
+                            navLinks
+                        }
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <a className="btn">Button</a>
+                <div className="navbar-end gap-2">
+                    <NavLink to={'/login'}><button className="btn">Login</button></NavLink>
+                    <NavLink to={'/register'}><button className="btn">Register</button></NavLink>
                 </div>
             </div>
         </div>
