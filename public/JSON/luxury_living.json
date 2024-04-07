@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "segment_name": "Penthouse",
+      "estate_title": "Luxury Penthouse with Panoramic City Views",
+      "description": "Experience ultimate luxury living in this stunning penthouse offering breathtaking panoramic views of the city skyline.",
+      "price": "$6,500,000",
+      "status": "sale",
+      "area": "4000 sq ft",
+      "location": "Downtown Metropolis",
+      "facilities": ["Spacious living room", "Infinity pool", "Gourmet kitchen"],
+      "image": "penthouse_image.jpg"
+    },
+    {
+      "id": 2,
+      "segment_name": "Beachfront Property",
+      "estate_title": "Luxurious Beachfront Villa with Private Access",
+      "description": "Escape to paradise in this exquisite beachfront villa featuring private access to a pristine sandy beach and stunning ocean views.",
+      "price": "$9,200,000",
+      "status": "sale",
+      "area": "6000 sq ft",
+      "location": "Tropical Island",
+      "facilities": ["Private beach access", "Infinity pool", "Outdoor dining area"],
+      "image": "beachfront_villa_image.jpg"
+    },
+    {
+      "id": 3,
+      "segment_name": "Resort",
+      "estate_title": "Exclusive Luxury Resort & Spa",
+      "description": "Indulge in luxury and relaxation at this exclusive resort & spa, offering world-class amenities and breathtaking natural surroundings.",
+      "price": "$15,000,000",
+      "status": "sale",
+      "area": "50 acres",
+      "location": "Secluded Island",
+      "facilities": ["Infinity pool", "Spa and wellness center", "Fine dining restaurants"],
+      "image": "luxury_resort_image.jpg"
+    },
+    {
+      "id": 4,
+      "segment_name": "Private Island",
+      "estate_title": "Exclusive Private Island Retreat",
+      "description": "Own your private paradise with this stunning private island retreat featuring luxurious accommodations and unparalleled privacy.",
+      "price": "$30,000,000",
+      "status": "sale",
+      "area": "100 acres",
+      "location": "Caribbean Sea",
+      "facilities": ["Exclusive beachfront", "Helipad", "Private villas"],
+      "image": "private_island_image.jpg"
+    },
+    {
+      "id": 5,
+      "segment_name": "Mountain Lodge",
+      "estate_title": "Luxury Mountain Lodge with Ski-in/Ski-out Access",
+      "description": "Experience luxury mountain living in this exquisite lodge featuring ski-in/ski-out access, breathtaking views, and upscale amenities.",
+      "price": "$7,800,000",
+      "status": "sale",
+      "area": "5500 sq ft",
+      "location": "Aspen, Colorado",
+      "facilities": ["Ski-in/ski-out access", "Hot tub", "Game room"],
+      "image": "mountain_lodge_image.jpg"
+    },
+    {
+      "id": 6,
+      "segment_name": "Castle",
+      "estate_title": "Historic Castle Estate with Modern Amenities",
+      "description": "Own a piece of history with this historic castle estate featuring modern amenities, lush gardens, and panoramic views.",
+      "price": "$20,000,000",
+      "status": "sale",
+      "area": "20000 sq ft",
+      "location": "Loire Valley, France",
+      "facilities": ["Grand ballroom", "Library", "Wine cellar"],
+      "image": "castle_estate_image.jpg"
+    },
+    {
+      "id": 7,
+      "segment_name": "Luxury Yacht",
+      "estate_title": "Ultra-Luxurious Superyacht with Helipad",
+      "description": "Sail the seas in unparalleled luxury aboard this ultra-luxurious superyacht featuring lavish accommodations, a helipad, and a jacuzzi.",
+      "price": "$50,000,000",
+      "status": "sale",
+      "area": "10000 sq ft",
+      "location": "Mediterranean Sea",
+      "facilities": ["Helipad", "Jacuzzi", "Cinema room"],
+      "image": "luxury_yacht_image.jpg"
+    },
+    {
+      "id": 8,
+      "segment_name": "Luxury Ranch",
+      "estate_title": "Exquisite Luxury Ranch Retreat",
+      "description": "Experience the ultimate in ranch living with this exquisite luxury ranch retreat featuring sprawling acres, equestrian facilities, and a private lake.",
+      "price": "$25,000,000",
+      "status": "sale",
+      "area": "5000 acres",
+      "location": "Montana, USA",
+      "facilities": ["Equestrian facilities", "Private lake", "Guest cabins"],
+      "image": "luxury_ranch_image.jpg"
+    },
+    {
+      "id": 9,
+      "segment_name": "Sky Villa",
+      "estate_title": "Sky-High Luxury Villa with Panoramic Views",
+      "description": "Elevate your living experience with this sky-high luxury villa offering breathtaking panoramic views, opulent amenities, and unparalleled luxury.",
+      "price": "$12,000,000",
+      "status": "sale",
+      "area": "3500 sq ft",
+      "location": "Dubai, UAE",
+      "facilities": ["Floor-to-ceiling windows", "Private terrace", "Infinity pool"],
+      "image": "sky_villa_image.jpg"
+    }
+  ]
+  
