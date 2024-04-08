@@ -36,10 +36,10 @@ const Register = () => {
 
         createUser(email, password)
             .then(result => {
-                console.log(result.user);
+                toast.success("Registration successfull.");
             })
             .catch(error => {
-                console.log(error.message);
+                toast.error(error.message);
             })
     }
 
