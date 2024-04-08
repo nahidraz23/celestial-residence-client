@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
-    const navLinks = <div className="flex gap-4 flex-col lg:flex-row text-xl uppercase p-3">
+    const navLinks = <div className="flex gap-4 flex-col lg:flex-row text-xl uppercase">
         <NavLink to={'/'} style={({ isActive }) => {
             return isActive ? { borderBottom: "2px solid #FEDA60", color: '#FEDA60', fontWeight: "600" } : {};
         }}><li>Home</li></NavLink>
@@ -16,7 +16,7 @@ const Navbar = () => {
 
     return (
         <div className="container mx-auto">
-            <div className="navbar bg-base-100">
+            <div className="navbar">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <a className="text-2xl font-bold font-inter ">Celestial Residence</a>
+                    <h1 className="text-2xl font-bold font-inter ">Celestial Residence</h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
