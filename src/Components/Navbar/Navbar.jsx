@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
-    const navLinks = <div className="flex gap-4 flex-col lg:flex-row text-xl uppercase">
+    const navLinks = <div className="flex gap-8 flex-col lg:flex-row text-xl uppercase">
         <NavLink to={'/'} style={({ isActive }) => {
             return isActive ? { borderBottom: "2px solid #FEDA60", color: '#FEDA60', fontWeight: "600" } : {};
         }}><li>Home</li></NavLink>
