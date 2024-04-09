@@ -1,4 +1,4 @@
-import { Children, createContext, useState } from "react";
+import { createContext, useState } from "react";
 import PropTypes from 'prop-types';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth } from "../../FirebaseConfig/firebase.config";
@@ -35,7 +35,7 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, gitHubProvider);
     }
 
-    
+
     const authInfo = {
         createUser,
         signInUser,

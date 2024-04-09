@@ -44,8 +44,8 @@ const Register = () => {
     }
 
     return (
-        <div className="w-full flex justify-center">
-            <div className="flex flex-col max-w-md lg:w-full p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800">
+        <div className="w-full flex justify-center my-10 ">
+            <div className="flex flex-col max-w-md lg:w-full p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800 border-2 border-purple-600">
                 <div className="mb-8 text-center">
                     <h1 className="my-3 text-4xl font-bold">Register</h1>
                     <p className="text-sm dark:text-gray-600">Register to create your account</p>

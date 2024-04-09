@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Marcellus&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Marcellus&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.font-inter{
-    font-family: "Inter", sans-serif;
+.font-inter {
+  font-family: "Inter", sans-serif;
 }
 
-.font-marcellus{
-    font-family: "Marcellus", serif;
+.font-marcellus {
+  font-family: "Marcellus", serif;
 }
