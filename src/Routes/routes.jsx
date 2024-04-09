@@ -6,6 +6,7 @@ import UpdateProfile from '../Components/UpdateProfile/UpdateProfile';
 import UserProfile from '../Components/UserProfile/UserProfile';
 import Login from '../Components/Login/Login';
 import Register from '../Components/Register/Register';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 const routes = createBrowserRouter([
     {
@@ -22,7 +23,10 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/user-profile',
-                element: <UserProfile></UserProfile>
+                element: 
+                <PrivateRoute>
+                    <UserProfile></UserProfile>
+                </PrivateRoute>
             },
             {
                 path: '/login',

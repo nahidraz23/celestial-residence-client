@@ -9,7 +9,7 @@
       "area": "4000 sq ft",
       "location": "Downtown Metropolis",
       "facilities": ["Spacious living room", "Infinity pool", "Gourmet kitchen"],
-      "image": "penthouse_image.jpg"
+      "image": "https://i.ibb.co/fYFWMX1/penthouse.jpg"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "area": "6000 sq ft",
       "location": "Tropical Island",
       "facilities": ["Private beach access", "Infinity pool", "Outdoor dining area"],
-      "image": "beachfront_villa_image.jpg"
+      "image": "https://i.ibb.co/y5nJqGD/beachfront.jpg"
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "area": "50 acres",
       "location": "Secluded Island",
       "facilities": ["Infinity pool", "Spa and wellness center", "Fine dining restaurants"],
-      "image": "luxury_resort_image.jpg"
+      "image": "https://i.ibb.co/CWq2jzH/resort.jpg"
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "area": "100 acres",
       "location": "Caribbean Sea",
       "facilities": ["Exclusive beachfront", "Helipad", "Private villas"],
-      "image": "private_island_image.jpg"
+      "image": "https://i.ibb.co/CKC3vwz/private-island.jpg"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "area": "5500 sq ft",
       "location": "Aspen, Colorado",
       "facilities": ["Ski-in/ski-out access", "Hot tub", "Game room"],
-      "image": "mountain_lodge_image.jpg"
+      "image": "https://i.ibb.co/RPBJb3q/mountain-lodge.jpg"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "area": "20000 sq ft",
       "location": "Loire Valley, France",
       "facilities": ["Grand ballroom", "Library", "Wine cellar"],
-      "image": "castle_estate_image.jpg"
+      "image": "https://i.ibb.co/G2xBsJd/castle.jpg"
     },
     {
       "id": 7,
@@ -81,7 +81,7 @@
       "area": "10000 sq ft",
       "location": "Mediterranean Sea",
       "facilities": ["Helipad", "Jacuzzi", "Cinema room"],
-      "image": "luxury_yacht_image.jpg"
+      "image": "https://i.ibb.co/CQtwd0T/luxury-yacht.jpg"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
       "area": "5000 acres",
       "location": "Montana, USA",
       "facilities": ["Equestrian facilities", "Private lake", "Guest cabins"],
-      "image": "luxury_ranch_image.jpg"
+      "image": "https://i.ibb.co/d5rZLj1/luxury-ranch.jpg"
     },
     {
       "id": 9,
@@ -105,7 +105,7 @@
       "area": "3500 sq ft",
       "location": "Dubai, UAE",
       "facilities": ["Floor-to-ceiling windows", "Private terrace", "Infinity pool"],
-      "image": "sky_villa_image.jpg"
+      "image": "https://i.ibb.co/XzmxppG/sky-view.jpg"
     }
   ]
   

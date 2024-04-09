@@ -1,6 +1,6 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import PropTypes from 'prop-types';
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { auth } from "../../FirebaseConfig/firebase.config";
 
 
@@ -9,15 +9,17 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState(null);
-
+    const [loading, setLoading] = useState(true);
 
     //Create User using email and password
     const createUser = (email, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     //SignIn user using email and password
     const signInUser = (email, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
@@ -25,6 +27,7 @@ const AuthProvider = ({ children }) => {
     const googleProvider = new GoogleAuthProvider();
 
     const googleLogin = () => {
+        setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
 
@@ -32,16 +35,35 @@ const AuthProvider = ({ children }) => {
     const gitHubProvider = new GithubAuthProvider();
 
     const gitHubLogin = () => {
+        setLoading(true);
         return signInWithPopup(auth, gitHubProvider);
     }
 
+    //Observer
+    useEffect(() => {
+        const unSubscribe = onAuthStateChanged(auth, currentUser => {
+            setUser(currentUser);
+            setLoading(false);
+        });
+
+        return () => {
+            unSubscribe();
+        }
+    }, [])
+
+    //Sign out user
+    const signOutUser = () => {
+        return signOut(auth);
+    }
 
     const authInfo = {
+        user,
         createUser,
         signInUser,
         googleLogin,
         gitHubLogin,
-
+        signOutUser,
+        loading,
     }
 
     return (
