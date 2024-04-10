@@ -1,0 +1,24 @@
+#swiperFDParent {
+  position: relative;
+  height: 100%;
+}
+
+#swiperFDParent .swiper{
+  width: 650px;
+  height: 700px;
+  /* position: absolute; */
+  left: 0;
+  top: 0;
+  /* margin-left: -150px;
+  margin-top: -150px; */
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+/* .swiper-slide img {
+  display: block;
+  width: 100%;
+} */

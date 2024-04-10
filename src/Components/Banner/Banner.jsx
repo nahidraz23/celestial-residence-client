@@ -13,7 +13,7 @@ import { Pagination, Navigation } from 'swiper/modules';
 
 const Banner = () => {
     return (
-        <div>
+        <div id='bannerSwiper'>
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}

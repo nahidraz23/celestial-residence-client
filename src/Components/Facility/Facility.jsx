@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 
 const Facility = ({ facility }) => {
-    const { segment_name, facilities, image, description } = facility;
+    const { segment_name, facilities, image, description, id } = facility;
 
     return (
-        <div className="flex gap-10">
+        <div className="flex flex-col lg:flex-row gap-10">
             <div className="flex-1 flex justify-center">
                 <img
                     src={image}
@@ -17,7 +18,7 @@ const Facility = ({ facility }) => {
                     <h1 className="text-4xl font-marcellus font-semibold">{segment_name}</h1>
                 </div>
                 <div>
-                    <p className="text-2xl font-marcellus">{description}</p>
+                    <p className="text-2xl font-inter">{description}</p>
                 </div>
                 <div className="flex gap-5">
                     {facilities.map((service, idx) => (
@@ -41,11 +42,11 @@ const Facility = ({ facility }) => {
                         <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
                         <span className="relative">Book Now</span>
                     </button>
-                    <button className="relative px-6 py-3 font-bold text-black group">
+                    <Link to={`/facilityDetails/${id}`} className="relative px-6 py-3 font-bold text-black group">
                         <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform -translate-x-2 -translate-y-2 bg-red-300 group-hover:translate-x-0 group-hover:translate-y-0"></span>
                         <span className="absolute inset-0 w-full h-full border-4 border-black"></span>
                         <span className="relative">View Details</span>
-                    </button>
+                    </Link>
                 </div>
             </div>
 
