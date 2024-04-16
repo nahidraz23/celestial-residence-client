@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -11,16 +12,12 @@ const Register = () => {
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
-
-
     const handleRegister = e => {
         e.preventDefault();
-        const name = e.target.displayName.value;
+        // const name = e.target.displayName.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const confirmPassword = e.target.confirmPassword.value;
-
-        console.log(name)
 
 
         if (confirmPassword !== password) {
@@ -47,6 +44,9 @@ const Register = () => {
 
     return (
         <div className="min-h-[calc(100vh-100px)]">
+            <Helmet>
+                <title>CR | Register</title>
+            </Helmet>
             <div className="w-full flex justify-center my-10 ">
                 <div className="flex flex-col max-w-md lg:w-full p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800 border-2 border-purple-600">
                     <div className="mb-8 text-center">
@@ -56,7 +56,7 @@ const Register = () => {
                     <form onSubmit={handleRegister} className="space-y-12">
                         <div className="space-y-4">
                             <div>
-                                <label htmlFor="name" className="block mb-2 text-sm">Email address</label>
+                                <label htmlFor="name" className="block mb-2 text-sm">Name</label>
                                 <input type="text" name="displayName" id="name" placeholder="leroy jenkins" className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800" />
                             </div>
                             <div>

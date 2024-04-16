@@ -1,8 +1,12 @@
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const ErrorElement = () => {
     return (
         <section className="flex justify-center items-center h-screen dark:bg-gray-50 dark:text-gray-800">
+            <Helmet>
+                <title>CR | 404 Error</title>
+            </Helmet>
             <div className="flex flex-col h-full items-center justify-center px-5 mx-auto my-8">
                 <div className="max-w-md text-center">
                     <h2 className="mb-8 font-extrabold text-9xl dark:text-gray-400">

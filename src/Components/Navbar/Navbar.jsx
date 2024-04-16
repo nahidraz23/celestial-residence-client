@@ -6,7 +6,7 @@ const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext);
 
     const navLinks = (
-        <div className="flex gap-8 flex-col lg:flex-row text-xl uppercase">
+        <div className="flex gap-8 flex-col lg:flex-row text-xl uppercase text-white">
             <NavLink
                 to={"/"}
                 style={({ isActive }) => {
@@ -37,38 +37,38 @@ const Navbar = () => {
             </NavLink>
             {
                 user &&
-                <div>
-                    <NavLink
-                        to={"/user-profile"}
-                        style={({ isActive }) => {
-                            return isActive
-                                ? {
-                                    borderBottom: "2px solid #FEDA60",
-                                    color: "#FEDA60",
-                                    fontWeight: "600",
-                                }
-                                : {};
-                        }}
-                    >
-                        <li className="">User Profile</li>
-                    </NavLink>
-                </div>
+
+                <NavLink
+                    to={"/user-profile"}
+                    style={({ isActive }) => {
+                        return isActive
+                            ? {
+                                borderBottom: "2px solid #FEDA60",
+                                color: "#FEDA60",
+                                fontWeight: "600",
+                            }
+                            : {};
+                    }}
+                >
+                    <li className="">User Profile</li>
+                </NavLink>
+
             }
         </div>
     );
 
     const handleUserSignOut = () => {
         signOutUser()
-        .then( result => {
-            toast.success("Sign out successfull.")
-        })
-        .catch(error => {
-            toast.error(error.message);
-        })
+            .then(result => {
+                toast.success("Sign out successfull.")
+            })
+            .catch(error => {
+                toast.error(error.message);
+            })
     }
 
     return (
-        <div className="w-full">
+        <div className="w-full bg-black bg-opacity-80">
             <div className="navbar container mx-auto ">
                 <div className="navbar-start ">
                     <div className="dropdown">
@@ -94,14 +94,17 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 z-10"
                         >
                             {navLinks}
                         </ul>
                     </div>
-                    <h1 className="text-2xl font-bold font-inter ">
-                        Celestial Residence
-                    </h1>
+                    <div>
+                        <h1 className="text-2xl font-bold font-inter text-white">
+                            Celestial Residence
+                        </h1>
+                        <h2 className="text-blue-400 font-thin text-sm text-center">Luxury Living</h2>
+                    </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">{navLinks}</ul>

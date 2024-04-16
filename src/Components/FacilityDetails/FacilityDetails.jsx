@@ -15,6 +15,7 @@ import './fd.css';
 
 // import required modules
 import { EffectCube, Pagination } from 'swiper/modules';
+import { Helmet } from 'react-helmet-async';
 
 const FacilityDetails = () => {
 
@@ -24,7 +25,6 @@ const FacilityDetails = () => {
         backgroundSize: "100%",
     }
 
-
     const stateFacilities = useLoaderData();
     const { id } = useParams();
     const facility = stateFacilities.find(service => service.id === parseInt(id));
@@ -32,7 +32,10 @@ const FacilityDetails = () => {
     const { segment_name, estate_title, description, price, status, area, location, facilities, image1, image2, image3, image4 } = facility;
 
     return (
-        <div  >
+        <div>
+            <Helmet>
+                <title>CR | {segment_name}</title>
+            </Helmet>
             <div className='w-full h-[560px]' style={bannerStyle}>
                 <div className='flex flex-col items-center justify-center h-full'>
                     <h1 className='text-6xl font-bold font-marcellus text-white'>{segment_name} Details</h1>

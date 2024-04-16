@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import Facility from "../Facility/Facility";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
+
 const Facilities = () => {
 
     const [facilities, setFacilities] = useState([]);
@@ -14,12 +19,12 @@ const Facilities = () => {
     return (
         <div className="container mx-auto mt-24">
             <div className="text-center text-6xl font-marcellus font-medium "> 
-                <h1 className=""><span className="border-b-2">Our Facilities</span></h1>
+                <h1 data-aos="fade-down" data-aos-duration="1500" className=""><span className="border-b-2">Our Luxury Facilities</span></h1>
             </div>
 
             <div className="flex flex-col gap-10 my-10">
                 {
-                    facilities.map((facility, idx) => <Facility key={idx} facility={facility}></Facility>)
+                    facilities.map((facility, index) => <Facility key={index} index={index} facility={facility}></Facility>)
                 }
             </div>
         </div>

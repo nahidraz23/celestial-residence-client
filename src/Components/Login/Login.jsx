@@ -3,10 +3,11 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
-    const { signInUser, googleLogin, gitHubLogin, signOutUser } = useContext(AuthContext);
+    const { signInUser, googleLogin, gitHubLogin } = useContext(AuthContext);
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -32,6 +33,7 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 toast.success(" Logged in as: " + result.user.email);
+                navigate('/');
             })
             .catch(error => {
                 console.log(error.message);
@@ -42,6 +44,7 @@ const Login = () => {
         gitHubLogin()
             .then(result => {
                 toast.success(" Logged in successfull.");
+                navigate('/');
             })
             .catch(error => {
                 toast.error(error.message);
@@ -50,6 +53,9 @@ const Login = () => {
 
     return (
         <div className="min-h-[calc(100vh-100px)]">
+            <Helmet>
+                <title>CR | Login</title>
+            </Helmet>
             <div className="w-full flex justify-center my-10">
                 <div className=" p-4 rounded-md shadow sm:p-8 dark:bg-gray-50 dark:text-gray-800 border-2 border-purple-600">
                     <h2 className="mb-3 text-3xl font-semibold text-center">

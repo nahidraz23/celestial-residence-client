@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const UserProfile = () => {
 
@@ -7,8 +8,11 @@ const UserProfile = () => {
 
     return (
         <div className="container mx-auto min-h-[calc(100vh-400px)] flex justify-center my-20">
-            <div className="flex flex-col justify-center p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
-                <img src={user?.photoURL} alt="" className="w-32 h-32 mx-auto rounded-full dark:bg-gray-500 aspect-square" />
+            <Helmet>
+                <title>CR | User Profile</title>
+            </Helmet>
+            <div className="flex flex-col justify-center p-6 shadow-md rounded-xl sm:px-12">
+                <img src={user?.photoURL} alt="" className="w-32 h-32 mx-auto rounded-full" />
                 <div className="space-y-4 text-center divide-y dark:divide-gray-300">
                     <div className="my-2 space-y-1">
                         <h2 className="text-xl font-semibold sm:text-2xl">{user.displayName}</h2>

@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
-const Facility = ({ facility }) => {
+AOS.init();
+
+const Facility = ({ facility, index }) => {
     const { segment_name, facilities, image, description, id } = facility;
 
     return (
-        <div className="flex flex-col lg:flex-row gap-10">
+        <div data-aos="fade-up" data-aos-duration="2000" className="flex flex-col lg:flex-row gap-10">
             <div className="flex-1 flex justify-center">
                 <img
                     src={image}
