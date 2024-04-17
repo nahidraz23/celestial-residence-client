@@ -7,11 +7,11 @@ const UserProfile = () => {
     const { user } = useContext(AuthContext);
 
     return (
-        <div className="container mx-auto min-h-[calc(100vh-400px)] flex justify-center my-20">
+        <div className="container mx-auto min-h-[calc(100vh-598px)] flex justify-center my-20">
             <Helmet>
                 <title>CR | User Profile</title>
             </Helmet>
-            <div className="flex flex-col justify-center p-6 shadow-md rounded-xl sm:px-12">
+            <div className="h-80 flex flex-col justify-center p-6 shadow-md rounded-xl sm:px-12 border-2 border-[#576CBC]">
                 <img src={user?.photoURL} alt="" className="w-32 h-32 mx-auto rounded-full" />
                 <div className="space-y-4 text-center divide-y dark:divide-gray-300">
                     <div className="my-2 space-y-1">

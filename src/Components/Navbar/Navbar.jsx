@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 const Navbar = () => {
     const { user, signOutUser } = useContext(AuthContext);
@@ -12,8 +13,8 @@ const Navbar = () => {
                 style={({ isActive }) => {
                     return isActive
                         ? {
-                            borderBottom: "2px solid #FEDA60",
-                            color: "#FEDA60",
+                            borderBottom: "2px solid #A5D7E8",
+                            color: "#A5D7E8",
                             fontWeight: "600",
                         }
                         : {};
@@ -26,14 +27,28 @@ const Navbar = () => {
                 style={({ isActive }) => {
                     return isActive
                         ? {
-                            borderBottom: "2px solid #FEDA60",
-                            color: "#FEDA60",
+                            borderBottom: "2px solid #A5D7E8",
+                            color: "#A5D7E8",
                             fontWeight: "600",
                         }
                         : {};
                 }}
             >
                 <li className="">Update Profile</li>
+            </NavLink>
+            <NavLink
+                to={"/booking"}
+                style={({ isActive }) => {
+                    return isActive
+                        ? {
+                            borderBottom: "2px solid #A5D7E8",
+                            color: "#A5D7E8",
+                            fontWeight: "600",
+                        }
+                        : {};
+                }}
+            >
+                <li className="">Booking</li>
             </NavLink>
             {
                 user &&
@@ -43,8 +58,8 @@ const Navbar = () => {
                     style={({ isActive }) => {
                         return isActive
                             ? {
-                                borderBottom: "2px solid #FEDA60",
-                                color: "#FEDA60",
+                                borderBottom: "2px solid #A5D7E8",
+                                color: "#A5D7E8",
                                 fontWeight: "600",
                             }
                             : {};
@@ -59,7 +74,7 @@ const Navbar = () => {
 
     const handleUserSignOut = () => {
         signOutUser()
-            .then(result => {
+            .then(() => {
                 toast.success("Sign out successfull.")
             })
             .catch(error => {
@@ -68,10 +83,10 @@ const Navbar = () => {
     }
 
     return (
-        <div className="w-full bg-black bg-opacity-80">
+        <div className="w-full bg-[#0B2447]">
             <div className="navbar container mx-auto ">
                 <div className="navbar-start ">
-                    <div className="dropdown">
+                    <div className="dropdown text-white">
                         <div
                             tabIndex={0}
                             role="button"
@@ -94,16 +109,16 @@ const Navbar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 z-10"
+                            className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-[#19376D] rounded-box w-52 z-10"
                         >
                             {navLinks}
                         </ul>
                     </div>
                     <div>
-                        <h1 className="text-2xl font-bold font-inter text-white">
+                        <h1 className="lg:text-3xl lg:font-bold font-marcelleus text-white">
                             Celestial Residence
                         </h1>
-                        <h2 className="text-blue-400 font-thin text-sm text-center">Luxury Living</h2>
+                        <h2 className="text-[#A5D7E8] font-thin text-sm text-center">Luxury Living</h2>
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -134,23 +149,31 @@ const Navbar = () => {
                             </div>
                             <button
                                 onClick={handleUserSignOut}
-                                className="btn"
+                                className="btn bg-[#A5D7E8] border-none"
                             >
                                 Sign out
                             </button>
                         </div>
                     ) : (
-                        <div className="flex gap-4">
+                        <div className="flex gap-1 lg:gap-4">
                             <NavLink to={"/login"}>
-                                <button className="btn">Login</button>
+                                <button className="btn bg-[#A5D7E8] border-none ">Login</button>
                             </NavLink>
                             <NavLink to={"/register"}>
-                                <button className="btn">Register</button>
+                                <button className="btn bg-[#A5D7E8] border-none">Register</button>
                             </NavLink>
                         </div>
                     )}
                 </div>
             </div>
+            <Toaster
+                position="top-center"
+                toastOptions={
+                    {
+                        duration: 2000,
+                    }
+                }
+            />
         </div>
     );
 };

@@ -13,13 +13,13 @@ const AuthProvider = ({ children }) => {
 
     //Create User using email and password
     const createUser = (email, password) => {
-        setLoading(true);
+        // setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     }
 
     //SignIn user using email and password
     const signInUser = (email, password) => {
-        setLoading(true);
+        // setLoading(true);
         return signInWithEmailAndPassword(auth, email, password);
     }
 
@@ -27,7 +27,7 @@ const AuthProvider = ({ children }) => {
     const googleProvider = new GoogleAuthProvider();
 
     const googleLogin = () => {
-        setLoading(true);
+        // setLoading(true);
         return signInWithPopup(auth, googleProvider);
     }
 
@@ -35,7 +35,7 @@ const AuthProvider = ({ children }) => {
     const gitHubProvider = new GithubAuthProvider();
 
     const gitHubLogin = () => {
-        setLoading(true);
+        // setLoading(true);
         return signInWithPopup(auth, gitHubProvider);
     }
 
@@ -53,6 +53,7 @@ const AuthProvider = ({ children }) => {
 
     //Sign out user
     const signOutUser = () => {
+        // setLoading(true);
         return signOut(auth);
     }
 

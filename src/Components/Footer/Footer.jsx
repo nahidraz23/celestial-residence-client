@@ -1,25 +1,33 @@
 import { NavLink } from "react-router-dom";
+import footer from '../../assets/images/footer.png'
 
 const Footer = () => {
+
+    const footerStyle = {
+        backgroundImage: `url(${footer})`,
+        backgroundRepeat: "no-repeat",
+        // backgroundSize: "100%",
+    }
+
     return (
-        <footer className="divide-y dark:bg-gray-100 dark:text-gray-800">
-            <div className="container flex flex-col items-center justify-center py-10 mx-auto space-y-8 lg:space-y-0 gap-10">
+        <footer className=" text-white" style={footerStyle}>
+            <div className="container flex flex-col items-center justify-center py-10 mx-auto space-y-8 lg:space-y-0 lg:gap-10">
                 <div className="lg:w-full">
-                    <NavLink to={'/'}><h1 className="text-center">Celestial Residence</h1></NavLink>
+                    <NavLink to={'/'}><h1 className="text-center font-marcellus text-3xl lg:text-5xl font-bold">Celestial Residence</h1></NavLink>
                 </div>
-                <div className="flex justify-center gap-10 lg:w-full sm:grid-cols-4">
+                <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:w-full sm:grid-cols-4 font-inter text-white">
                     <div className="space-y-3">
-                        <h3 className="tracking-wide uppercase dark:text-gray-900">Experiences</h3>
+                        <h3 className="tracking-wide uppercase">Experiences</h3>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="tracking-wide uppercase dark:text-gray-900">Special Offers</h3>
+                        <h3 className="tracking-wide uppercase">Special Offers</h3>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="uppercase dark:text-gray-900">Accomadation</h3>
+                        <h3 className="uppercase">Accomadation</h3>
                     </div>
                 </div>
                 <div className="space-y-3">
-                    <div className="uppercase dark:text-gray-900">Social media</div>
+                    <div className="uppercase text-white border-b-2 border-white">Social media</div>
                     <div className="flex justify-start space-x-3">
                         <a rel="noopener noreferrer" href="#" title="Facebook" className="flex items-center p-1">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" className="w-5 h-5 fill-current">
@@ -39,7 +47,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="py-6 text-sm text-center dark:text-gray-600">© 2024 Celestial Residence. All rights reserved.</div>
+            <hr />
+            <div className="py-6 text-sm text-center text-gray-300">© 2024 Celestial Residence. All rights reserved.</div>
         </footer>
     );
 };

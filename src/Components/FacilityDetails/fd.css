@@ -4,7 +4,7 @@
 }
 
 #swiperFDParent .swiper{
-  width: 650px;
+  width: 430px;
   height: 700px;
   /* position: absolute; */
   left: 0;
@@ -18,7 +18,7 @@
   background-size: cover;
 }
 
-/* .swiper-slide img {
+.swiper-slide img {
   display: block;
   width: 100%;
-} */
+}

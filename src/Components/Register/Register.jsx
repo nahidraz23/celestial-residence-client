@@ -14,7 +14,6 @@ const Register = () => {
 
     const handleRegister = e => {
         e.preventDefault();
-        // const name = e.target.displayName.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         const confirmPassword = e.target.confirmPassword.value;
@@ -34,8 +33,9 @@ const Register = () => {
         }
 
         createUser(email, password)
-            .then(result => {
+            .then(() => {
                 toast.success("Registration successfull.");
+
             })
             .catch(error => {
                 toast.error(error.message);
@@ -48,7 +48,7 @@ const Register = () => {
                 <title>CR | Register</title>
             </Helmet>
             <div className="w-full flex justify-center my-10 ">
-                <div className="flex flex-col max-w-md lg:w-full p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800 border-2 border-purple-600">
+                <div className="flex flex-col max-w-md lg:w-full p-6 rounded-md sm:p-10 bg-gray-50 text-gray-800 border-2 border-[#576CBC]">
                     <div className="mb-8 text-center">
                         <h1 className="my-3 text-4xl font-bold">Register</h1>
                         <p className="text-sm dark:text-gray-600">Register to create your account</p>
@@ -100,16 +100,16 @@ const Register = () => {
                         </div>
                         <div className="space-y-2">
                             <div>
-                                <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md dark:bg-violet-600 dark:text-gray-50">Register</button>
+                                <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md bg-[#19376D] text-gray-50 hover:bg-gray-200 hover:text-[#19376D]">Register</button>
                             </div>
-                            <p className="px-6 text-sm text-center dark:text-gray-600">Already have an account?
-                                <NavLink to={'/login'} className="hover:underline dark:text-violet-600"> Login</NavLink>
+                            <p className="px-6 text-sm text-center text-gray-600">Already have an account?
+                                <NavLink to={'/login'} className="hover:underline text-[#576CBC]"> Login</NavLink>
                             </p>
                         </div>
                     </form>
                 </div>
                 <Toaster
-                    position="top-right"
+                    position="top-center"
                     toastOptions={
                         {
                             duration: 2000,

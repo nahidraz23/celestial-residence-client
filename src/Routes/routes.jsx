@@ -9,6 +9,7 @@ import Register from '../Components/Register/Register';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import FacilityDetails from '../Components/FacilityDetails/FacilityDetails';
 import ErrorElement from '../Components/ErrorElement/ErrorElement';
+import Bookings from '../Components/Bookings/Bookings';
 
 const routes = createBrowserRouter([
     {
@@ -22,14 +23,17 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/update-profile',
-                element: <UpdateProfile></UpdateProfile>
+                element:
+                    <PrivateRoute>
+                        <UpdateProfile></UpdateProfile>
+                    </PrivateRoute>
             },
             {
                 path: '/user-profile',
-                element: 
-                <PrivateRoute>
-                    <UserProfile></UserProfile>
-                </PrivateRoute>
+                element:
+                    <PrivateRoute>
+                        <UserProfile></UserProfile>
+                    </PrivateRoute>
             },
             {
                 path: '/login',
@@ -41,11 +45,18 @@ const routes = createBrowserRouter([
             },
             {
                 path: '/facilityDetails/:id',
-                element: 
-                <PrivateRoute>
-                    <FacilityDetails></FacilityDetails>
-                </PrivateRoute>,
+                element:
+                    <PrivateRoute>
+                        <FacilityDetails></FacilityDetails>
+                    </PrivateRoute>,
                 loader: () => fetch('https://nahidraz23.github.io/JSON_Data/property_details.json')
+            },
+            {
+                path: '/booking',
+                element:
+                    <PrivateRoute>
+                        <Bookings></Bookings>
+                    </PrivateRoute>
             }
         ]
     }
