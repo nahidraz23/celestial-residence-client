@@ -28,10 +28,6 @@ Easily get in touch with the website owner or agent through a built-in contact f
 ### 7. Responsive Design
 Enjoy a seamless browsing experience across devices with a responsive website design optimized for desktops, tablets, and mobile phones.
 
-## Usage
-
-To explore Celestial Residence and discover your dream property, simply visit [Celestial Residence](https://celestial-residence.web.app/).
-
 ## Contributing
 
 Contributions are welcome! If you have any suggestions, feature requests, or bug reports, please feel free to open an issue or submit a pull request.

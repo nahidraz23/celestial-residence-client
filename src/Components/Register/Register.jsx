@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 const Register = () => {
 
     const { createUser } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     const [showPassword, setShowPassword] = useState(false);
     const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -35,6 +36,7 @@ const Register = () => {
         createUser(email, password)
             .then(() => {
                 toast.success("Registration successfull.");
+                navigate(location?.state ? location.state : '/')
 
             })
             .catch(error => {
