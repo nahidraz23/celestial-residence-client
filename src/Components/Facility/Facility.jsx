@@ -8,12 +8,12 @@ const Facility = ({ facility, index }) => {
     const { segment_name, facilities, image, description, id } = facility;
 
     return (
-        <div data-aos={index%2 === 0 ? "fade-left" : "fade-right"} data-aos-duration="1000" className="flex flex-col lg:flex-row gap-10">
+        <div data-aos={index%2 === 0 ? "fade-left" : "fade-right"} data-aos-duration="1000" className="flex flex-col lg:flex-row gap-10 overflow-hidden">
             <div className="flex-1 flex justify-center">
                 <img
                     src={image}
                     alt=""
-                    className="w-[557px] h-[556px]"
+                    className="w-[557px] h-[556px] hover:scale-110 hover:cursor-pointer"
                 />
             </div>
 

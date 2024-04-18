@@ -1,15 +1,24 @@
 import { useContext } from "react";
 import { AuthContext } from "../Components/AuthProvider/AuthProvider";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import PropTypes from 'prop-types';
+import ClockLoader from "react-spinners/ClockLoader";
 
 const PrivateRoute = ({ children }) => {
 
     const { user, loading } = useContext(AuthContext);
+    const location = useLocation();
 
     if (loading) {
         return <div className="min-h-[calc(100vh-400px)] container mx-auto flex items-center justify-center">
-            <div className="w-16 h-16 border-4 border-dashed rounded-full animate-spin dark:border-violet-600"></div>
+            {/* <div className="loading loading-infinity w-24 h-24 text-blue-400"></div> */}
+            <ClockLoader
+                color='#DD5746'
+                loading={loading}
+                size={100}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+            />
         </div>
     }
 
@@ -17,7 +26,7 @@ const PrivateRoute = ({ children }) => {
         return children;
     }
 
-    return <Navigate to="/login"></Navigate>
+    return <Navigate to="/login" state={location?.pathname || '/'}></Navigate>
 };
 
 export default PrivateRoute;

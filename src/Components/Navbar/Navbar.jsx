@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -115,9 +115,11 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div>
-                        <h1 className="lg:text-3xl lg:font-bold font-marcelleus text-white">
-                            Celestial Residence
-                        </h1>
+                        <Link to={'/'}>
+                            <h1 className="lg:text-3xl lg:font-bold font-marcelleus text-white">
+                                Celestial Residence
+                            </h1>
+                        </Link>
                         <h2 className="text-[#A5D7E8] font-thin text-sm text-center">Luxury Living</h2>
                     </div>
                 </div>
@@ -167,7 +169,7 @@ const Navbar = () => {
                 </div>
             </div>
             <Toaster
-                position="top-center"
+                position="bottom-right"
                 toastOptions={
                     {
                         duration: 2000,

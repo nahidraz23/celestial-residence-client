@@ -1,11 +1,14 @@
-import { useContext, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../AuthProvider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
 import { Helmet } from "react-helmet-async";
 
 const Login = () => {
+
+    let location = useLocation();
+    console.log(location)
 
     const { signInUser, googleLogin, gitHubLogin } = useContext(AuthContext);
 
@@ -22,7 +25,7 @@ const Login = () => {
             .then((result) => {
                 toast.success(" Logged in as: " + result.user.email);
                 e.target.reset();
-                navigate('/');
+                navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
                 toast.error(error.message);
@@ -33,7 +36,8 @@ const Login = () => {
         googleLogin()
             .then(result => {
                 toast.success(" Logged in as: " + result.user.email);
-                navigate('/');
+                navigate(location?.state ? location.state : '/')
+                console.log(location)
             })
             .catch(error => {
                 console.log(error.message);
@@ -44,7 +48,7 @@ const Login = () => {
         gitHubLogin()
             .then(() => {
                 toast.success(" Logged in successfull.");
-                navigate('/');
+                navigate(location?.state ? location.state : '/');
             })
             .catch(error => {
                 toast.error(error.message);
@@ -167,7 +171,7 @@ const Login = () => {
                     </form>
                 </div>
                 <Toaster
-                    position="top-center"
+                    position="bottom-right"
                     toastOptions={
                         {
                             duration: 2000,

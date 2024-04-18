@@ -22,7 +22,7 @@ const Facilities = () => {
                 <h1 data-aos="fade-down" data-aos-duration="1500" className=""><span className="text-[#19376D] border-b-2 border-[#19376D]">Our Luxury Facilities</span></h1>
             </div>
 
-            <div className="flex flex-col gap-10 my-10 p-4 lg:p-0">
+            <div className="flex flex-col gap-10 my-10 p-4 lg:p-0 overflow-x-hidden">
                 {
                     facilities.map((facility, index) => <Facility key={index} index={index} facility={facility}></Facility>)
                 }
