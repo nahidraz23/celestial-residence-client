@@ -144,13 +144,13 @@ const FacilityDetails = () => {
             <section data-aos='flip-left' data-aos-duration="1000" className='mt-10 lg:h-[440px] flex items- justify-center ' style={areaSection}>
                 <div className='flex flex-col items-center lg:gap-5 p-4'>
                     <div>
-                        <h1 className='lg:text-5xl font-marcellus font-bold'>
+                        <h1 className='text-2xl lg:text-5xl font-marcellus font-bold'>
                             Area
                         </h1>
                     </div>
                     <div className='flex flex-col items-center lg:gap-10'>
-                        <FaLandmark className='lg:w-48 lg:h-48 text-green-600'></FaLandmark>
-                        <h1 className=' lg:text-6xl font-inter font-semibold'>{area}</h1>
+                        <FaLandmark className='w-24 h-24 lg:w-48 lg:h-48 text-green-600'></FaLandmark>
+                        <h1 className='text-2xl lg:text-6xl font-inter font-semibold'>{area}</h1>
                     </div>
                 </div>
             </section>
@@ -158,13 +158,13 @@ const FacilityDetails = () => {
             <section data-aos='flip-right' data-aos-duration="1500" className='lg:h-[440px] flex items- justify-center ' style={locationSection}>
                 <div className='flex flex-col items-center lg:gap-5 p-4'>
                     <div>
-                        <h1 className='lg:text-5xl font-marcellus font-bold'>
+                        <h1 className='text-2xl lg:text-5xl font-marcellus font-bold'>
                             Location
                         </h1>
                     </div>
                     <div className='flex flex-col items-center lg:gap-10'>
-                        <FaMapMarkedAlt className='lg:w-48 lg:h-48 text-red-600'></FaMapMarkedAlt>
-                        <h1 className='lg:text-6xl font-inter font-semibold'>{location}</h1>
+                        <FaMapMarkedAlt className='w-24 h-24 lg:w-48 lg:h-48 text-red-600'></FaMapMarkedAlt>
+                        <h1 className='text-2xl lg:text-6xl font-inter font-semibold'>{location}</h1>
                     </div>
                 </div>
             </section>
@@ -172,13 +172,13 @@ const FacilityDetails = () => {
             <section data-aos='flip-left' data-aos-duration="2000" className='lg:h-[440px] flex items- justify-center ' style={areaSection}>
                 <div className='flex flex-col items-center lg:gap-5 p-4'>
                     <div>
-                        <h1 className='lg:text-5xl font-marcellus font-bold'>
+                        <h1 className='text-2xl lg:text-5xl font-marcellus font-bold'>
                             Price
                         </h1>
                     </div>
                     <div className='flex flex-col items-center lg:gap-10'>
-                        <HiCurrencyDollar className='lg:w-48 lg:h-48 text-green-600'></HiCurrencyDollar>
-                        <h1 className='lg:text-6xl font-inter font-semibold'>{price}</h1>
+                        <HiCurrencyDollar className='w-24 h-24 lg:w-48 lg:h-48 text-green-600'></HiCurrencyDollar>
+                        <h1 className='text-2xl lg:text-6xl font-inter font-semibold'>{price}</h1>
                     </div>
                 </div>
             </section>
