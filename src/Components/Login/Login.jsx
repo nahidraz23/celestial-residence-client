@@ -37,7 +37,6 @@ const Login = () => {
             .then(result => {
                 toast.success(" Logged in as: " + result.user.email);
                 navigate(location?.state ? location.state : '/')
-                console.log(location)
             })
             .catch(error => {
                 console.log(error.message);
