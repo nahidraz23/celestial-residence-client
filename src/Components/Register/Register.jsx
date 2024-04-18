@@ -109,7 +109,7 @@ const Register = () => {
                     </form>
                 </div>
                 <Toaster
-                    position="top-center"
+                    position="bottom-right"
                     toastOptions={
                         {
                             duration: 2000,
